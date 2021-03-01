@@ -1,0 +1,90 @@
+.wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar {
+    height: 100%;
+    border-right: 1px solid #d2d9e0;
+    width: 200px;
+}
+
+.logo {
+    height: 40px;
+    padding-top: 25px;
+    padding-left: 30px;
+}
+
+.logo__item {
+    font-size: 20px;
+    color: #546bec;
+}
+
+
+.menu__item {
+    border-radius: 0px;
+    height: 50px;
+    width: 200px;
+    color: #5c6063;
+    font-weight: 300;
+    font-size: 18px;
+    text-align: left;
+    padding-left: 30px;
+}
+
+.menu__item:hover {
+    border-right: 3px solid #5c6063;
+}
+
+.menu__item:focus {
+    border-right: 3px solid #546bec;
+    color: #546bec;
+    background-color: #546bec15;
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 15px -3px, rgba(0, 0, 0, 0.02) 0px 4px 6px -2px;
+}
+
+.search-bar {
+    width: 700px;
+    height: 50px;
+    padding-left: 30px;
+}
+
+.profile {
+    width: 100%;
+    height: 54px;
+    padding: 0 30px 0 0;
+}
+
+.profile__notification {
+    font-weight: 200;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.profile__username {
+    font-size: 18px;
+    font-weight: 200;
+    padding-left: 20px;
+    border-left: 1px solid #7e8286;
+}
+
+.profile__username__dropdown {
+    cursor: pointer;
+}
+
+.router {
+    width: 100%;
+    height: 100%;
+}

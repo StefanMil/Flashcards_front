@@ -1,0 +1,38 @@
+<div class="wrapper" fxLayout="row" fxLayoutAlign="start none">
+    <div class="sidebar" fxLayout="column" fxLayoutAlign="start none">
+        <div class="logo">
+            <span class="logo__item">Flashcards FON</span>
+        </div>
+        <div class="menu" fxLayout="column" fxLayoutAlign="space-between none">
+            <button mat-button class="menu__item" routerLink="/pocetna" routerLinkActive="active">Početna</button>
+            <button mat-button class="menu__item" routerLink="/prva-godina" routerLinkActive="active">Prva</button>
+            <button mat-button class="menu__item" routerLink="/druga-godina" routerLinkActive="active">Druga</button>
+            <button mat-button class="menu__item" routerLink="/treca-godina" routerLinkActive="active">Treca</button>
+            <button mat-button class="menu__item" routerLink="/cetvrta-godina" routerLinkActive="active">Ćetvrta</button>
+        </div>
+    </div>
+    <div class="main" fxLayout="column" fxLayoutAlign="start none">
+        <div class="header" fxLayout="row" fxLayoutAlign="end center">
+            <mat-form-field class="search-bar">
+                <mat-label>Pretraga</mat-label>
+                <input matInput type="text">
+                <button mat-button matSuffix mat-icon-button aria-label="Pretraga" (click)="search()">
+                  <mat-icon>search</mat-icon>
+                </button>
+            </mat-form-field>
+            <div class="profile" fxLayout="row" fxLayoutAlign="end center">
+                <mat-icon class="profile__notification" matBadge="5" matBadgeColor="warn" matBadgeSize="small">notifications_none</mat-icon>
+                <span class="profile__username">yoggie</span>
+                <mat-icon class="profile__username__dropdown" [matMenuTriggerFor]="menu">keyboard_arrow_down</mat-icon>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item>
+                        <span>Logout</span>
+                    </button>
+                </mat-menu>
+            </div>  
+        </div>
+        <div class="router">
+            <router-outlet ></router-outlet>
+        </div>
+    </div>
+</div>
