@@ -1,1 +1,38 @@
-<p>druga-godina works!</p>
+<div class="content" fxLayout="column" fxLayoutAlign="space-evenly center">
+    <div class="table_card--row" fxLayout="row" fxLayoutAlign="space-evenly center">
+        <div class="table_card">
+            <div class="table_card__title--wrapper">
+                <span class="table_card__title">Informacioni sistemi i tehnologije</span>
+            </div>
+            <div class="table_card__table--wrapper">
+                <app-predmeti-tabela [smer]="'isit'"></app-predmeti-tabela>
+            </div>
+        </div>
+        <div class="table_card">
+            <div class="table_card__title--wrapper">
+                <span class="table_card__title">Opšti menadžment</span>
+            </div>
+            <div class="table_card__table--wrapper">
+                <app-predmeti-tabela [smer]="'men'"></app-predmeti-tabela>
+            </div>
+        </div>
+    </div>
+    <div class="table_card--row" fxLayout="row" fxLayoutAlign="space-evenly center">
+        <div class="table_card">
+            <div class="table_card__title--wrapper">
+                <span class="table_card__title">Operacioni menadžment</span>
+            </div>
+            <div class="table_card__table--wrapper">
+                <app-predmeti-tabela [smer]="'isit'"></app-predmeti-tabela>
+            </div>
+        </div>
+        <div class="table_card">
+            <div class="table_card__title--wrapper">
+                <span class="table_card__title">Menadžment kvaliteta i standardizacija</span>
+            </div>
+            <div class="table_card__table--wrapper">
+                <app-predmeti-tabela [smer]="'men'"></app-predmeti-tabela>
+            </div>
+        </div>
+    </div>
+</div>

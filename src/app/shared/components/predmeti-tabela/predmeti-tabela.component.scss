@@ -1,24 +1,81 @@
-.mat-table {
-    height: 500px;
-    overflow-x: scroll;
-  }
-  .mat-cell,
-.mat-header-cell {
-  word-wrap: initial;
-  display: table-cell;
-  padding: 0px 10px;
-  line-break: unset;
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  vertical-align: middle;
-}
-
-.mat-row,
-.mat-header-row {
-  display: table-row;
+.wrapper{
+  height: 80%;
 }
 
 .table {
-    height: 500px;
+  width: 90%;
+  height: 100%;
+}
+
+.table__rows--wrapper {
+  width: 100%;
+  overflow-y:auto;
+}
+
+.table__rows {
+  height: 100%;
+}
+
+.table__header {
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 20px;
+  height: 40px;
+  background-color: #e4e4e4;
+}
+
+.table__row {
+  width: 100%;
+  padding-left: 20px;
+  height: 40px;
+  border-bottom: 0.5px solid #d2d9e0;
+}
+
+.table__row:hover {
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+.table__header__item {
+  text-align: left;
+}
+
+.table__header__item--predmet {
+  width: 50%;
+}
+
+.table__header__item--katedra {
+  width: 40%;
+}
+
+.table__header__item--espb {
+  width: 10%;
+}
+
+.table__row__item--predmet {
+  width: 50%;
+}
+
+.table__row__item--katedra {
+  width: 40%;
+}
+
+.table__row__item--espb {
+  width: 10%;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PredmetiTabelaComponent } from './predmeti-tabela.component';
 import { MatTableModule } from '@angular/material/table';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -10,7 +10,8 @@ import { MatTableModule } from '@angular/material/table';
   ],
   imports: [
     CommonModule,
-    MatTableModule
+    MatTableModule,
+    FlexLayoutModule
   ],
   exports: [
     PredmetiTabelaComponent

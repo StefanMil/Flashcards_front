@@ -5,7 +5,24 @@
 }
 
 .table_card {
-    width: 90%;
-    height: 40%;
+    width: 45%;
+    height: 90%;
     background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.table_card__title--wrapper {
+    width: 100%;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 3%;
+}
+
+.table_card__title {
+    font-size: 18px;
+    padding-right: 5%;
+}
+
+.table_card__table--wrapper{
+    height: 100%;
 }
