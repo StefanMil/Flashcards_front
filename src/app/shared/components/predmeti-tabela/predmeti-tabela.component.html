@@ -8,7 +8,7 @@
             </tr>
         </div>
         <div class="table__rows--wrapper table__rows">
-            <tr class="table__row" *ngFor="let p of dataSource" fxLayout="row" fxLayoutAlign="space-between center">
+            <tr class="table__row" *ngFor="let p of dataSource" routerLink="/predmet/{{p.id}}" fxLayout="row" fxLayoutAlign="space-between center">
                 <td class="table__row__item table__row__item--predmet">{{p.predmet}}</td>
                 <td class="table__row__item table__row__item--katedra">{{p.katedra}}</td>
                 <td class="table__row__item table__row__item--espb">{{p.espb}}</td>

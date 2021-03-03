@@ -5,6 +5,7 @@ import { DrugaGodinaComponent } from './godine/druga-godina/druga-godina.compone
 import { PrvaGodinaComponent } from './godine/prva-godina/prva-godina.component';
 import { TrecaGodinaComponent } from './godine/treca-godina/treca-godina.component';
 import { PocetnaComponent } from './pocetna/pocetna.component';
+import { PredmetComponent } from './predmet/predmet.component';
 
 const routes: Routes = [
   { path: 'pocetna', component: PocetnaComponent },
@@ -12,6 +13,8 @@ const routes: Routes = [
   { path: 'druga-godina', component: DrugaGodinaComponent },
   { path: 'treca-godina', component: TrecaGodinaComponent },
   { path: 'cetvrta-godina', component: CetvrtaGodinaComponent },
+  { path: 'cetvrta-godina', component: CetvrtaGodinaComponent },
+  { path: 'predmet/:id', component: PredmetComponent }
 ];
 
 @NgModule({

@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { prvaGodinaIsit, prvaGodinaMen } from '../../mock/MockConstants';
 
 export interface Predmet {
+  id: number;
   predmet: string;
   katedra: string;
   espb: number;

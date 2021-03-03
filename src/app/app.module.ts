@@ -11,6 +11,7 @@ import { PredmetiTabelaComponent } from './shared/components/predmeti-tabela/pre
 import { DrugaGodinaModule } from './godine/druga-godina/druga-godina.module';
 import { TrecaGodinaModule } from './godine/treca-godina/treca-godina.module';
 import { CetvrtaGodinaModule } from './godine/cetvrta-godina/cetvrta-godina.module';
+import { PredmetModule } from './predmet/predmet.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CetvrtaGodinaModule } from './godine/cetvrta-godina/cetvrta-godina.modu
     PrvaGodinaModule,
     DrugaGodinaModule,
     TrecaGodinaModule,
-    CetvrtaGodinaModule
+    CetvrtaGodinaModule,
+    PredmetModule
   ],
   providers: [],
   bootstrap: [AppComponent]
