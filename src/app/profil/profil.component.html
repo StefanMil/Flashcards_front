@@ -4,11 +4,11 @@
             <span class="logo__item">Flashcards FON</span>
         </div>
         <div class="menu" fxLayout="column" fxLayoutAlign="space-between none">
-            <button mat-button class="menu__item" routerLink="/pocetna" routerLinkActive="active">Početna</button>
-            <button mat-button class="menu__item" routerLink="/prva-godina" routerLinkActive="active">Prva</button>
-            <button mat-button class="menu__item" routerLink="/druga-godina" routerLinkActive="active">Druga</button>
-            <button mat-button class="menu__item" routerLink="/treca-godina" routerLinkActive="active">Treca</button>
-            <button mat-button class="menu__item" routerLink="/cetvrta-godina" routerLinkActive="active">Ćetvrta</button>
+            <button mat-button class="menu__item" routerLink="/app/pocetna" routerLinkActive="active">Početna</button>
+            <button mat-button class="menu__item" routerLink="/app/prva-godina" routerLinkActive="active">Prva</button>
+            <button mat-button class="menu__item" routerLink="/app/druga-godina" routerLinkActive="active">Druga</button>
+            <button mat-button class="menu__item" routerLink="/app/treca-godina" routerLinkActive="active">Treca</button>
+            <button mat-button class="menu__item" routerLink="/app/cetvrta-godina" routerLinkActive="active">Ćetvrta</button>
         </div>
     </div>
     <div class="main" fxLayout="column" fxLayoutAlign="start none">
@@ -25,7 +25,7 @@
                 <span class="profile__username">yoggie</span>
                 <mat-icon class="profile__username__dropdown" [matMenuTriggerFor]="menu">keyboard_arrow_down</mat-icon>
                 <mat-menu #menu="matMenu">
-                    <button mat-menu-item>
+                    <button mat-menu-item routerLink="/login">
                         <span>Logout</span>
                     </button>
                 </mat-menu>

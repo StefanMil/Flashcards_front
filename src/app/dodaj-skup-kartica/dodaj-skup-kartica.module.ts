@@ -1,26 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginComponent } from './login.component';
+import { DodajSkupKarticaComponent } from './dodaj-skup-kartica.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { AppRoutingModule } from '../app-routing.module';
+
 
 @NgModule({
   declarations: [
-    LoginComponent
+    DodajSkupKarticaComponent
   ],
   imports: [
     CommonModule,
+    FlexLayoutModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule,
-    FlexLayoutModule,
-    AppRoutingModule
+    MatButtonModule
   ],
   exports: [
-    LoginComponent
-  ],
+    DodajSkupKarticaComponent
+  ]
 })
-export class LoginModule { }
+export class DodajSkupKarticaModule { }

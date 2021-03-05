@@ -12,6 +12,7 @@ import { DrugaGodinaModule } from './godine/druga-godina/druga-godina.module';
 import { TrecaGodinaModule } from './godine/treca-godina/treca-godina.module';
 import { CetvrtaGodinaModule } from './godine/cetvrta-godina/cetvrta-godina.module';
 import { PredmetModule } from './predmet/predmet.module';
+import { DodajSkupKarticaModule } from './dodaj-skup-kartica/dodaj-skup-kartica.module';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { PredmetModule } from './predmet/predmet.module';
     DrugaGodinaModule,
     TrecaGodinaModule,
     CetvrtaGodinaModule,
-    PredmetModule
+    PredmetModule,
+    DodajSkupKarticaModule
   ],
   providers: [],
   bootstrap: [AppComponent]

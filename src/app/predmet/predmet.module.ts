@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PredmetComponent } from './predmet.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatIconModule } from '@angular/material/icon';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { MatIconModule } from '@angular/material/icon';
   imports: [
     CommonModule,
     FlexLayoutModule,
-    MatIconModule
+    MatIconModule,
+    AppRoutingModule,
   ],
   exports: [
     PredmetComponent

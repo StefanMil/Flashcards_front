@@ -1,0 +1,73 @@
+<div class="content" fxLayout="row" fxLayoutAlign="space-evenly center">
+    <div class="wrapper" fxLayout="row" fxLayoutAlign="space-evenly center">
+        <div class="first_column" fxLayout="column" fxLayoutAlign="space-evenly center">
+            <div class="deck_info">
+                <div class="deck_info__title" fxLayout="row" fxLayoutAlign="space-between start">
+                    <span class="deck_info__title--text">Dodaj novi skup kartica</span>
+                    <span class="deck_info__title--subtitle">Predmet: Baze podataka</span>
+                </div>
+                <div class="deck_info__content">
+                    <div class="deck__title" fxLayout="row" fxLayoutAlign="start center">
+                        <span class="deck__title--text">Naziv skupa kartica:</span>
+                        <mat-form-field class="deck__title__input">
+                            <mat-label>Unesite naziv... </mat-label>
+                            <input matInput>
+                        </mat-form-field>
+                    </div>
+                    <div class="front__back" fxLayout="row" fxLayoutAlign="space-between start">
+                        <div class="front__title" fxLayout="column" fxLayoutAlign="start start">
+                            <span class="front__title--text">Prednja strana:</span>
+                            <mat-form-field class="front__title__input">
+                                <textarea matInput class="front__title__input--textarea"></textarea>
+                            </mat-form-field>
+                        </div>
+                        <div class="back__title" fxLayout="column" fxLayoutAlign="start start">
+                            <span class="back__title--text">Zadnja strana:</span>
+                            <mat-form-field class="back__title__input">
+                                <textarea matInput class="back__title__input--textarea"></textarea>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="front__back__cards" fxLayout="row" fxLayoutAlign="space-between start">
+                        <div class="front__card" fxLayout="column" fxLayoutAlign="center center">
+                            <span class="front__card--text">/</span>
+                            
+                        </div>
+                        <div class="back__card" fxLayout="column" fxLayoutAlign="center center">
+                            <span class="back__card--text">/</span>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="add-card" fxLayout="row" fxLayoutAlign="end center">
+                    <button mat-flat-button class="add-card__card" color="primary">Dodaj karticu</button>
+                    <button mat-flat-button color="primary">Dodaj skup kartica</button>
+                </div>
+            </div>
+        </div>
+        <div class="second_column" fxLayout="column" fxLayoutAlign="start center">
+            <div class="deck_list" fxLayout="column" fxLayoutAlign="start start">
+                <div class="deck_list__title" fxLayout="row" fxLayoutAlign="space-between start">
+                    <span class="deck_info__title--text">Dodate kartice</span>
+                </div>
+                <div class="deck">
+                    <div class="card" fxLayout="column" fxLayoutAlign="center center">
+                        <span class="card--text">/</span>
+                    </div>
+                    <div class="card" fxLayout="column" fxLayoutAlign="center center">
+                        <span class="card--text">/</span>
+                    </div>
+                    <div class="card" fxLayout="column" fxLayoutAlign="center center">
+                        <span class="card--text">/</span>
+                    </div>
+                    <div class="card" fxLayout="column" fxLayoutAlign="center center">
+                        <span class="card--text">/</span>
+                    </div>
+                    <div class="card" fxLayout="column" fxLayoutAlign="center center">
+                        <span class="card--text">/</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
