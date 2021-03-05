@@ -1,0 +1,112 @@
+.content {
+    height: 100%;
+    width: 100%;
+    background-color: #f0f0f0;
+}
+
+.wrapper{
+    width: 90%;
+    height: 90%;
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.title {
+    width: 90%;
+    height: 7%;
+    padding-top: 40px;
+    padding-left: 1.2%;
+    padding-right: 2.2%;
+}
+
+.title__text {
+    font-size: 22px;
+}
+
+.title__icons {
+    width: 90px;
+    height: 30px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.title__icons:hover {
+    background-color: #546bec23;
+}
+
+.title__icon__text {
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.title__icon {
+    color: #546bec
+}
+
+.decks {
+    height: 85%;
+    width: 94%;
+}
+
+.deck {
+    width: 200px;
+    height: 200px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-bottom: 5px solid #546bec;
+    margin: 3% 3.5% 3% 3.5%;
+}
+
+.deck__header {
+    width: 100%;
+    height: 10%;
+    padding-top: 10%;
+    padding-right: 7%;
+}
+
+.deck__header__icon {
+    color: #546bec;
+    cursor: pointer;
+}
+
+.deck__header__text {
+    font-weight: 200;
+    color: #5c6063;
+}
+
+.deck__title {
+    width: 100%;
+    height: 90%;
+}
+
+.deck__title__text {
+    font-size: 18px;
+    text-align: center;
+}
+
+.deck__title__author {
+    margin-top: 10%;
+    font-weight: 200;
+    color: #5c6063;
+    text-align: center;
+}
+
+.deck__date {
+    padding-bottom: 3%;
+}
+
+.deck__date__text {
+    font-weight: 200;
+    color: #5c6063;
+}
+
+.pagination {
+    height: 5%;
+    width: 90%;
+    padding-bottom: 20px;
+    padding-right: 10px;
+}
+
+.pagination__icon {
+    color: #546bec;
+    cursor: pointer;
+}

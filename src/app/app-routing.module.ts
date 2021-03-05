@@ -8,6 +8,7 @@ import { TrecaGodinaComponent } from './godine/treca-godina/treca-godina.compone
 import { LoginComponent } from './login/login.component';
 import { PocetnaComponent } from './pocetna/pocetna.component';
 import { PredmetComponent } from './predmet/predmet.component';
+import { PretragaComponent } from './pretraga/pretraga.component';
 import { PrikazKarticaComponent } from './prikaz-kartica/prikaz-kartica.component';
 import { ProfilComponent } from './profil/profil.component';
 
@@ -24,6 +25,7 @@ const routes: Routes = [
       { path: 'predmet/:id', component: PredmetComponent },
       { path: 'dodaj-skup-kartica', component: DodajSkupKarticaComponent },
       { path: 'prikaz', component: PrikazKarticaComponent },
+      { path: 'pretraga/:id', component: PretragaComponent },
       { path: '',   redirectTo: 'pocetna', pathMatch: 'full' },
       { path: '**',   redirectTo: 'pocetna', pathMatch: 'full' },
     ]

@@ -10,6 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatBadgeModule } from '@angular/material/badge';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { PocetnaModule } from '../pocetna/pocetna.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [ 
@@ -18,6 +19,7 @@ import { PocetnaModule } from '../pocetna/pocetna.module';
   imports: [
     CommonModule,
     AppRoutingModule,
+    FormsModule,
     MatMenuModule,
     MatIconModule,
     MatButtonModule, 

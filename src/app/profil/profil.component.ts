@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profil',
@@ -7,13 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfilComponent implements OnInit {
 
-  constructor() { }
+  searchBy: string;
+
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
 
   public search(): void {
-    
+    this.router.navigateByUrl('/app/pretraga/' + this.searchBy);
   }
 
 }

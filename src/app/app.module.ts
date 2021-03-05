@@ -14,6 +14,7 @@ import { CetvrtaGodinaModule } from './godine/cetvrta-godina/cetvrta-godina.modu
 import { PredmetModule } from './predmet/predmet.module';
 import { DodajSkupKarticaModule } from './dodaj-skup-kartica/dodaj-skup-kartica.module';
 import { PrikazKarticaModule } from './prikaz-kartica/prikaz-kartica.module';
+import { PretragaModule } from './pretraga/pretraga.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { PrikazKarticaModule } from './prikaz-kartica/prikaz-kartica.module';
     CetvrtaGodinaModule,
     PredmetModule,
     DodajSkupKarticaModule,
-    PrikazKarticaModule
+    PrikazKarticaModule,
+    PretragaModule
   ],
   providers: [],
   bootstrap: [AppComponent]
