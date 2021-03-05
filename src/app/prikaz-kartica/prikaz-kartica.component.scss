@@ -1,0 +1,74 @@
+.content {
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+}
+
+.wrapper {
+    width: 90%;
+    height: 90%;
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.deck__info {
+    padding-top: 2%;
+    width: 90%;
+}
+
+.deck_info__title--text {
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.deck_info__title--subtitle {
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+.card__list {
+    width: 90%;
+    height: 75%;
+    padding-top: 40px;
+}
+
+.card__list__arrow {
+    width: 72px;
+    height: 72px;
+    font-size: 72px;
+    text-align: center;
+    color: #7c7c7c;
+    cursor: pointer;
+}
+
+.card__list__arrow:hover {
+    color: #546bec;
+}
+
+.card {
+    width: 420px;
+    height: 420px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-bottom: 5px solid #546bec;
+    margin: 0 3.5% 3% 3.5%;
+    cursor: pointer;
+}
+
+.card:hover {
+    width: 430px;
+    height: 430px;
+    transition: 0.2s;
+}
+
+.card--text {
+    max-width: 350px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 20px;
+}
+
+.deck__pagination__text {
+    font-size: 16px;
+    font-weight: 200;
+    padding-top: 10px;
+}
