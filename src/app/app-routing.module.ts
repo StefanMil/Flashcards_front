@@ -5,6 +5,7 @@ import { CetvrtaGodinaComponent } from './godine/cetvrta-godina/cetvrta-godina.c
 import { DrugaGodinaComponent } from './godine/druga-godina/druga-godina.component';
 import { PrvaGodinaComponent } from './godine/prva-godina/prva-godina.component';
 import { TrecaGodinaComponent } from './godine/treca-godina/treca-godina.component';
+import { IzmeniProfilComponent } from './izmeni-profil/izmeni-profil.component';
 import { LoginComponent } from './login/login.component';
 import { PocetnaComponent } from './pocetna/pocetna.component';
 import { PredmetComponent } from './predmet/predmet.component';
@@ -22,10 +23,11 @@ const routes: Routes = [
       { path: 'treca-godina', component: TrecaGodinaComponent },
       { path: 'cetvrta-godina', component: CetvrtaGodinaComponent },
       { path: 'cetvrta-godina', component: CetvrtaGodinaComponent },
-      { path: 'predmet/:id', component: PredmetComponent },
+      { path: 'predmet/:id/:page', component: PredmetComponent },
       { path: 'dodaj-skup-kartica', component: DodajSkupKarticaComponent },
       { path: 'prikaz', component: PrikazKarticaComponent },
-      { path: 'pretraga/:id', component: PretragaComponent },
+      { path: 'izmeni-profil', component: IzmeniProfilComponent },
+      { path: 'pretraga/:id/:page', component: PretragaComponent },
       { path: '',   redirectTo: 'pocetna', pathMatch: 'full' },
       { path: '**',   redirectTo: 'pocetna', pathMatch: 'full' },
     ]

@@ -15,10 +15,12 @@ import { PredmetModule } from './predmet/predmet.module';
 import { DodajSkupKarticaModule } from './dodaj-skup-kartica/dodaj-skup-kartica.module';
 import { PrikazKarticaModule } from './prikaz-kartica/prikaz-kartica.module';
 import { PretragaModule } from './pretraga/pretraga.module';
+import { IzmeniProfilModule } from './izmeni-profil/izmeni-profil.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,9 @@ import { PretragaModule } from './pretraga/pretraga.module';
     PredmetModule,
     DodajSkupKarticaModule,
     PrikazKarticaModule,
-    PretragaModule
+    PretragaModule,
+    IzmeniProfilModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

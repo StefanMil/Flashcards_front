@@ -3,6 +3,9 @@ export class Kartica {
     SkupKarticaID: number;
     TekstFront: string;
     TekstBack: string;
-    BrojLajkova: number;
-    BrojKartica: number;
+
+    constructor(tekstFront: string, tekstBack: string){
+        this.TekstFront = tekstFront;
+        this.TekstBack = tekstBack;
+    }
 }

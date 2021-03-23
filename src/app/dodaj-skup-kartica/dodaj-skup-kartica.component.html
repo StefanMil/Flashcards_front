@@ -18,30 +18,30 @@
                         <div class="front__title" fxLayout="column" fxLayoutAlign="start start">
                             <span class="front__title--text">Prednja strana:</span>
                             <mat-form-field class="front__title__input">
-                                <textarea matInput class="front__title__input--textarea"></textarea>
+                                <textarea matInput class="front__title__input--textarea" [(ngModel)]="this.frontText"></textarea>
                             </mat-form-field>
                         </div>
                         <div class="back__title" fxLayout="column" fxLayoutAlign="start start">
                             <span class="back__title--text">Zadnja strana:</span>
                             <mat-form-field class="back__title__input">
-                                <textarea matInput class="back__title__input--textarea"></textarea>
+                                <textarea matInput class="back__title__input--textarea" [(ngModel)]="this.backText"></textarea>
                             </mat-form-field>
                         </div>
                     </div>
                     <div class="front__back__cards" fxLayout="row" fxLayoutAlign="space-between start">
                         <div class="front__card" fxLayout="column" fxLayoutAlign="center center">
-                            <span class="front__card--text">/</span>
+                            <span class="front__card--text">{{this.frontText}}</span>
                             
                         </div>
                         <div class="back__card" fxLayout="column" fxLayoutAlign="center center">
-                            <span class="back__card--text">/</span>
+                            <span class="back__card--text">{{this.backText}}</span>
                             
                         </div>
                     </div>
                 </div>
                 <div class="add-card" fxLayout="row" fxLayoutAlign="end center">
-                    <button mat-flat-button class="add-card__card" color="primary">Dodaj karticu</button>
-                    <button mat-flat-button color="primary">Dodaj skup kartica</button>
+                    <button mat-flat-button class="add-card__card" color="primary" (click)="this.addCard()">Dodaj karticu</button>
+                    <button mat-flat-button color="primary" (click)="this.addDeck()">Dodaj skup kartica</button>
                 </div>
             </div>
         </div>
@@ -51,20 +51,8 @@
                     <span class="deck_info__title--text">Dodate kartice</span>
                 </div>
                 <div class="deck">
-                    <div class="card" fxLayout="column" fxLayoutAlign="center center">
-                        <span class="card--text">/</span>
-                    </div>
-                    <div class="card" fxLayout="column" fxLayoutAlign="center center">
-                        <span class="card--text">/</span>
-                    </div>
-                    <div class="card" fxLayout="column" fxLayoutAlign="center center">
-                        <span class="card--text">/</span>
-                    </div>
-                    <div class="card" fxLayout="column" fxLayoutAlign="center center">
-                        <span class="card--text">/</span>
-                    </div>
-                    <div class="card" fxLayout="column" fxLayoutAlign="center center">
-                        <span class="card--text">/</span>
+                    <div class="card" *ngFor="let c of this.deck" fxLayout="column" fxLayoutAlign="center center">
+                        <span class="card--text">{{c.TekstFront}}</span>
                     </div>
                 </div>
             </div>

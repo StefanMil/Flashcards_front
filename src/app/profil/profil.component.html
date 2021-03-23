@@ -15,7 +15,7 @@
         <div class="header" fxLayout="row" fxLayoutAlign="end center">
             <mat-form-field class="search-bar">
                 <mat-label>Pretraga</mat-label>
-                <input matInput type="text" [(ngModel)]="searchBy">
+                <input matInput type="text" [(ngModel)]="searchBy" (keyup.enter)="search()">
                 <button mat-button matSuffix mat-icon-button aria-label="Pretraga" (click)="search()">
                   <mat-icon>search</mat-icon>
                 </button>
@@ -25,6 +25,9 @@
                 <span class="profile__username">yoggie</span>
                 <mat-icon class="profile__username__dropdown" [matMenuTriggerFor]="menu">keyboard_arrow_down</mat-icon>
                 <mat-menu #menu="matMenu">
+                    <button mat-menu-item routerLink="/app/izmeni-profil">
+                        <span>Izmeni profil</span>
+                    </button>
                     <button mat-menu-item routerLink="/login">
                         <span>Logout</span>
                     </button>

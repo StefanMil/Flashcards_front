@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -8,6 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PretragaComponent implements OnInit {
 
+  @Input()
   searchBy: string = "";
 
   constructor(private route: ActivatedRoute) {
@@ -15,7 +16,9 @@ export class PretragaComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.searchBy = this.route.snapshot.paramMap.get('id');
+    this.route.params.subscribe(queryParams => {
+      this.searchBy = queryParams.id;
+    });
   }
 
 }
