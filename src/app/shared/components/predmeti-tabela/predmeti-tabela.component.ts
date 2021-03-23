@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { PredmetService } from 'src/app/services/predmet.service';
 import { prvaGodinaIsit, prvaGodinaMen } from '../../mock/MockConstants';
+import { PredmetService } from '../../services/predmet.service';
 
 export interface Predmet {
   id: number;

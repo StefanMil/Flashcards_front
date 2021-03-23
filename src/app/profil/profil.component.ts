@@ -16,7 +16,7 @@ export class ProfilComponent implements OnInit {
   }
 
   public search(): void {
-    this.router.navigateByUrl('/app/pretraga/' + this.searchBy);
+    this.router.navigateByUrl('/app/pretraga/' + this.searchBy + "/1");
   }
 
 }

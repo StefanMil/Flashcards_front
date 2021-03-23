@@ -13,7 +13,7 @@
                     <mat-icon class="deck__header__icon">favorite_border</mat-icon>
                     <span class="deck__header__text">{{s.numberOfLikes}}</span>
                 </div>
-                <div class="deck__title" fxLayout="column" fxLayoutAlign="center center" routerLink="/app/prikaz">
+                <div class="deck__title" fxLayout="column" fxLayoutAlign="center center" routerLink="/app/skup-kartica/{{s.deckOfCardsID}}">
                     <span class="deck__title__text">{{s.name}}</span>
                     <span class="deck__title__author">Autor: {{s.user.username}}</span>
                 </div>

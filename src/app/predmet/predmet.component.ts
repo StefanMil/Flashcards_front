@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { PredmetService } from '../services/predmet.service';
-import { skupKarticaBazePodataka } from '../shared/mock/MockConstants';
 import { DeckOfCards } from '../shared/models/deck-of-cards.model';
+import { PredmetService } from '../shared/services/predmet.service';
 
 @Component({
   selector: 'app-predmet',
@@ -15,7 +14,8 @@ export class PredmetComponent implements OnInit {
   public page: number;
   public subject: string = 'undefined';
 
-  constructor(private route: ActivatedRoute,private predmetService: PredmetService) { }
+  constructor(private route: ActivatedRoute,
+    private predmetService: PredmetService) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];

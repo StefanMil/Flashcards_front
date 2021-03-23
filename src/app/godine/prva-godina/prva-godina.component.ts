@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PredmetService } from 'src/app/services/predmet.service';
+
 
 @Component({
   selector: 'app-prva-godina',
