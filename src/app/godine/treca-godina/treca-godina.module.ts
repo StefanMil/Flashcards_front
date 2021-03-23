@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TrecaGodinaComponent } from './treca-godina.component';
+import { PredmetiTabelaModule } from 'src/app/shared/components/predmeti-tabela/predmeti-tabela.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -9,7 +11,9 @@ import { TrecaGodinaComponent } from './treca-godina.component';
     TrecaGodinaComponent
   ],
   imports: [
-    CommonModule
+    CommonModule, 
+    FlexLayoutModule, 
+    PredmetiTabelaModule
   ],
   exports: [
     TrecaGodinaComponent

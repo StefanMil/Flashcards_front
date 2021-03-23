@@ -1,1 +1,18 @@
-<p>treca-godina works!</p>
+<div class="content" fxLayout="row" fxLayoutAlign="space-evenly center">
+    <div class="table_card">
+        <div class="table_card__title--wrapper">
+            <span class="table_card__title">Informacioni sistemi i tehnologije</span>
+        </div>
+        <div class="table_card__table--wrapper">
+            <app-predmeti-tabela [smer]="'isit'"></app-predmeti-tabela>
+        </div>
+    </div>
+    <div class="table_card">
+        <div class="table_card__title--wrapper">
+            <span class="table_card__title">Menadžment i organizacija</span>
+        </div>
+        <div class="table_card__table--wrapper">
+            <app-predmeti-tabela [smer]="'men'"></app-predmeti-tabela>
+        </div>
+    </div>
+</div>

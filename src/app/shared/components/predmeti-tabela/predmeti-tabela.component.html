@@ -3,15 +3,15 @@
         <div class="table__rows--wrapper">
             <tr class="table__header" fxLayout="row" fxLayoutAlign="space-between center">
                 <th class="table__header__item table__header__item--predmet">Predmet</th>
-                <th class="table__header__item table__header__item--katedra">Katedra</th>
-                <th class="table__header__item table__header__item--espb">ESPB</th>
+                <th class="table__header__item table__header__item--katedra">Semestar</th>
+                <th class="table__header__item table__header__item--espb">Katedra</th>
             </tr>
         </div>
         <div class="table__rows--wrapper table__rows">
-            <tr class="table__row" *ngFor="let p of dataSource" routerLink="/app/predmet/{{p.id}}/1" fxLayout="row" fxLayoutAlign="space-between center">
-                <td class="table__row__item table__row__item--predmet">{{p.predmet}}</td>
-                <td class="table__row__item table__row__item--katedra">{{p.katedra}}</td>
-                <td class="table__row__item table__row__item--espb">{{p.espb}}</td>
+            <tr class="table__row" *ngFor="let p of dataSource" routerLink="/app/predmet/{{p.subjectID}}/1" fxLayout="row" fxLayoutAlign="space-between center">
+                <td class="table__row__item table__row__item--predmet">{{p.name}}</td>
+                <td class="table__row__item table__row__item--katedra">{{p.semester}}</td>
+                <td class="table__row__item table__row__item--espb">{{p.department}}</td>
             </tr>
         </div>
     </table>
