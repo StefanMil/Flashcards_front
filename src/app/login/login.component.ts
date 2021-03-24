@@ -11,9 +11,8 @@ export class LoginComponent implements OnInit {
 
   public username: string;
   public password: string;
-  private result: string;
 
-  constructor(private loginService: LoginService, private _snackBar: MatSnackBar) { }
+  constructor(private loginService: LoginService) { }
 
   ngOnInit(): void {
   }

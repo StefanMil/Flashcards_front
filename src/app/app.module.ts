@@ -17,10 +17,12 @@ import { PrikazKarticaModule } from './prikaz-kartica/prikaz-kartica.module';
 import { PretragaModule } from './pretraga/pretraga.module';
 import { IzmeniProfilModule } from './izmeni-profil/izmeni-profil.module';
 import { HttpClientModule } from '@angular/common/http';
+import { RegisterComponent } from './register/register.component';
+import { RegisterModule } from './register/register.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +39,7 @@ import { HttpClientModule } from '@angular/common/http';
     PrikazKarticaModule,
     PretragaModule,
     IzmeniProfilModule,
+    RegisterModule,
     HttpClientModule
   ],
   providers: [],

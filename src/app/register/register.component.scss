@@ -1,0 +1,46 @@
+.page {
+    height: 100%;
+    width: 100%;
+    background-image: url("../../assets/img/login-background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.content{
+    height: 90%;
+    width: 90%;
+    padding: 10px;
+    background-color: rgb(255, 255, 255, 0.8);
+}
+
+.header {
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 50px;
+}
+
+.header__logo{
+    font-size: 18px;
+    color: #3f51b5;
+}
+
+.main__title {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.main__form--form-field {
+    width: 250px;
+}
+
+.main__form__buttons {
+    width: 250px;
+}
+
+.main__form__buttons--button {
+    width: 100px;
+}
+
+.footer {
+    padding-bottom: 10px;
+}

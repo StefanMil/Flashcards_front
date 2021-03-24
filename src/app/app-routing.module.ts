@@ -12,9 +12,11 @@ import { PredmetComponent } from './predmet/predmet.component';
 import { PretragaComponent } from './pretraga/pretraga.component';
 import { PrikazKarticaComponent } from './prikaz-kartica/prikaz-kartica.component';
 import { ProfilComponent } from './profil/profil.component';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
   { path: 'app', component: ProfilComponent, 
     children : [
       { path: 'pocetna', component: PocetnaComponent },
