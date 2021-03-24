@@ -24,8 +24,8 @@ export class PredmetComponent implements OnInit {
     this.predmetService.vratiSkupoveKartica(this.id, this.page)
         .subscribe(skupoviKartica => {
           console.log(skupoviKartica);
-          this.decks = skupoviKartica;
-          this.subject = this.decks[0].subject.name;
+          this.decks = skupoviKartica.Decks;
+          this.subject = this.decks[0].Subject.Name;
         });
   }
 
@@ -34,8 +34,8 @@ export class PredmetComponent implements OnInit {
     this.predmetService.vratiSkupoveKartica(this.id, --this.page)
         .subscribe(skupoviKartica => {
           console.log(skupoviKartica);
-          this.decks = skupoviKartica;
-          this.subject = this.decks[0].subject.name;
+          this.decks = skupoviKartica.Decks;
+          this.subject = this.decks[0].Subject.Name;
         });
     }
   }
@@ -44,8 +44,8 @@ export class PredmetComponent implements OnInit {
     this.predmetService.vratiSkupoveKartica(this.id, ++this.page)
         .subscribe(skupoviKartica => {
           console.log(skupoviKartica);
-          this.decks = skupoviKartica;
-          this.subject = this.decks[0].subject.name;
+          this.decks = skupoviKartica.Decks;
+          this.subject = this.decks[0].Subject.Name;
         });
   }
 

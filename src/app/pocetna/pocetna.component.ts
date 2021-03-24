@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../shared/services/login.service';
 
 @Component({
   selector: 'app-pocetna',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PocetnaComponent implements OnInit {
 
-  constructor() { }
+  public currentUser: any;
+
+  constructor(private loginService: LoginService) { 
+    this.currentUser = this.loginService.currentUser;
+  }
 
   ngOnInit(): void {
+    
   }
 
 }

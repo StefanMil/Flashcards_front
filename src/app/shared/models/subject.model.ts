@@ -1,7 +1,7 @@
 export class Subject {
-    subjectID: number;
-    name: string;
-    year: number;
-    semester: number;
-    department: number;
+    SubjectID: number;
+    Name: string;
+    Year: number;
+    Semester: number;
+    Department: number;
 }

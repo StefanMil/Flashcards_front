@@ -21,9 +21,11 @@ export class LoginService {
     this.http.post<any>("http://localhost:5000/login", { username: username.toString(), password: password.toString() })
       .subscribe(
         (response) => {
+          console.log(response);
           localStorage.setItem('currentUser', 'true');
           this.router.navigateByUrl('app/pocetna');
           this.currentUser = response;
+          localStorage.setItem('username', this.currentUser.User.Username);
         },
         (error) => {
           if(error.error.text==='Ne postoji taj username u bazi'){

@@ -11,11 +11,11 @@
             <div class="deck" fxLayout="column" *ngFor="let s of this.decks" FxLayoutAlign="space-around center">
                 <div class="deck__header" fxLayout="row" fxLayoutAlign="end center">
                     <mat-icon class="deck__header__icon">favorite_border</mat-icon>
-                    <span class="deck__header__text">{{s.numberOfLikes}}</span>
+                    <span class="deck__header__text">{{s.NumberOfLikes}}</span>
                 </div>
                 <div class="deck__title" fxLayout="column" fxLayoutAlign="center center" routerLink="/app/skup-kartica/{{s.deckOfCardsID}}">
-                    <span class="deck__title__text">{{s.name}}</span>
-                    <span class="deck__title__author">Autor: {{s.user.username}}</span>
+                    <span class="deck__title__text">{{s.Name}}</span>
+                    <span class="deck__title__author">Autor: {{s.User.Username}}</span>
                 </div>
                 <div class="deck__date" fxLayout="column" fxLayoutAlign="center center">
                     <span class="deck__date__text">{{s.date | date: 'dd/MM/yyyy'}}</span>

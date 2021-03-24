@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Kartica } from '../shared/models/kartica.model';
+import { Card } from '../shared/models/card.model';
 
 @Component({
   selector: 'app-dodaj-skup-kartica',
@@ -10,8 +10,8 @@ export class DodajSkupKarticaComponent implements OnInit {
 
   public frontText: string = "";
   public backText: string = "";
-  public deck: Kartica[];
-  private card: Kartica;
+  public deck: Card[];
+  private card: Card;
 
   constructor() { }
 
@@ -20,7 +20,7 @@ export class DodajSkupKarticaComponent implements OnInit {
   }
 
   public addCard(): void {
-    this.card = new Kartica(this.frontText,this.backText);
+    this.card = new Card(this.frontText,this.backText);
     this.deck.push(this.card);
     this.frontText = "";
     this.backText = "";

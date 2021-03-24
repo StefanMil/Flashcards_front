@@ -22,7 +22,7 @@
             </mat-form-field>
             <div class="profile" fxLayout="row" fxLayoutAlign="end center">
                 <mat-icon class="profile__notification" matBadge="5" matBadgeColor="warn" matBadgeSize="small">notifications_none</mat-icon>
-                <span class="profile__username">yoggie</span>
+                <span class="profile__username">{{this.username}}</span>
                 <mat-icon class="profile__username__dropdown" [matMenuTriggerFor]="menu">keyboard_arrow_down</mat-icon>
                 <mat-menu #menu="matMenu">
                     <button mat-menu-item routerLink="/app/izmeni-profil">

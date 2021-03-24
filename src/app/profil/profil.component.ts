@@ -10,6 +10,8 @@ import { LoginService } from '../shared/services/login.service';
 export class ProfilComponent implements OnInit {
 
   public searchBy: string;
+  public currentUser: any;
+  public username: string;
 
   constructor(private router:Router, private loginService:LoginService) { }
 
@@ -17,6 +19,9 @@ export class ProfilComponent implements OnInit {
     if (!(localStorage.getItem('currentUser')=='true')) {
       this.router.navigateByUrl('login');
     }
+    this.currentUser = this.loginService.currentUser;
+    this.username = localStorage.getItem('username');
+    
   }
 
   public search(): void {
