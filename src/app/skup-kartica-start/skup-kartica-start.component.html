@@ -1,0 +1,129 @@
+<div class="content" fxLayout="row" fxLayoutAlign="space-evenly center">
+    <div class="wrapper" fxLayout="row" fxLayoutAlign="space-evenly center">
+        <div class="first_column" fxLayout="column" fxLayoutAlign="space-evenly center">
+            <div class="deck_info">
+                <div class="deck_info__title" fxLayout="row" fxLayoutAlign="space-between start">
+                    <span class="deck_info__title--text">Skup kartica: SQL komande</span>
+                    <span class="deck_info__title--subtitle">Predmet: Baze podataka</span>
+                </div>
+                <div class="comment-section">
+                    <span class="comment-section__title">Komentari:</span>
+                    <div class="comments">
+                        <div class="comment-and-subcomments">
+                            <div class="comment" fxLayout="column" fxLayoutAlign="space-evenly start">
+                                <span class="comment-user">
+                                    Pera
+                                </span>
+                                <span class="comment-text">
+                                    Ovo je komentar na skup kartica.
+                                </span>
+                                <span class="comment-reply">
+                                    Odgovori
+                                </span>
+                            </div>
+                            <div class="subcomment" fxLayout="column" fxLayoutAlign="space-evenly start">
+                                <span class="comment-user">
+                                    Mika
+                                </span>
+                                <span class="subcomment-text">
+                                    Ovo je podkomentar na skup kartica.
+                                </span>
+                            </div>
+                            <div class="subcomment" fxLayout="column" fxLayoutAlign="space-evenly start">
+                                <span class="comment-user">
+                                    Mika
+                                </span>
+                                <span class="subcomment-text">
+                                    Ovo je drugi podkomentar na skup kartica.
+                                </span>
+                            </div>
+                        </div>
+                        <div class="comment-and-subcomments">
+                            <div class="comment" fxLayout="column" fxLayoutAlign="space-evenly start">
+                                <span class="comment-user">
+                                    Pera
+                                </span>
+                                <span class="comment-text">
+                                    Ovo je komentar na skup kartica.
+                                </span>
+                                <span class="comment-reply">
+                                    Odgovori
+                                </span>
+                            </div>
+                            <div class="subcomment" fxLayout="column" fxLayoutAlign="space-evenly start">
+                                <span class="comment-user">
+                                    Mika
+                                </span>
+                                <span class="subcomment-text">
+                                    Ovo je podkomentar na skup kartica.
+                                </span>
+                            </div>
+                        </div>
+                        <div class="comment-and-subcomments">
+                            <div class="comment" fxLayout="column" fxLayoutAlign="space-evenly start">
+                                <span class="comment-user">
+                                    Pera
+                                </span>
+                                <span class="comment-text">
+                                    Ovo je komentar na skup kartica.
+                                </span>
+                                <span class="comment-reply">
+                                    Odgovori
+                                </span>
+                            </div>
+                            <div class="subcomment" fxLayout="column" fxLayoutAlign="space-evenly start">
+                                <span class="comment-user">
+                                    Mika
+                                </span>
+                                <span class="subcomment-text">
+                                    Ovo je podkomentar na skup kartica.
+                                </span>
+                            </div>
+                            <div class="subcomment" fxLayout="column" fxLayoutAlign="space-evenly start">
+                                <span class="comment-user">
+                                    Mika
+                                </span>
+                                <span class="subcomment-text">
+                                    Ovo je podkomentar na skup kartica.
+                                </span>
+                            </div>
+                            <div class="subcomment" fxLayout="column" fxLayoutAlign="space-evenly start">
+                                <span class="comment-user">
+                                    Mika
+                                </span>
+                                <span class="subcomment-text">
+                                    Ovo je podkomentar na skup kartica.
+                                </span>
+                            </div>
+                            <div class="subcomment" fxLayout="column" fxLayoutAlign="space-evenly start">
+                                <span class="comment-user">
+                                    Mika
+                                </span>
+                                <span class="subcomment-text">
+                                    Ovo je podkomentar na skup kartica.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="add-comment" fxLayout="row" fxLayoutAlign="end end">
+                <button mat-flat-button class="add-comment-button" color="primary">Dodaj komentar</button>
+                <button mat-flat-button color="primary">Započni</button>
+            </div>
+        </div>
+        <div class="second_column" fxLayout="column" fxLayoutAlign="start center">
+            <div class="deck_list" fxLayout="column" fxLayoutAlign="start start">
+                <div class="deck_list__title" fxLayout="row" fxLayoutAlign="space-between start">
+                    <span class="deck_info__title--text">Pregled kartica</span>
+                </div>
+                <div class="deck">
+                    <div class="card" *ngFor="let c of this.cards" fxLayout="column" fxLayoutAlign="center center">
+                        <span class="card--text">{{c.TextFront}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

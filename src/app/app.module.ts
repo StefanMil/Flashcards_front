@@ -19,6 +19,7 @@ import { IzmeniProfilModule } from './izmeni-profil/izmeni-profil.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
 import { RegisterModule } from './register/register.module';
+import { SkupKarticaStartModule } from './skup-kartica-start/skup-kartica-start.module';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { RegisterModule } from './register/register.module';
     PretragaModule,
     IzmeniProfilModule,
     RegisterModule,
+    SkupKarticaStartModule,
     HttpClientModule
   ],
   providers: [],
