@@ -11,7 +11,7 @@
                         <span class="deck__title--text">Naziv skupa kartica:</span>
                         <mat-form-field class="deck__title__input">
                             <mat-label>Unesite naziv... </mat-label>
-                            <input matInput>
+                            <input matInput [(ngModel)]="this.name">
                         </mat-form-field>
                     </div>
                     <div class="front__back" fxLayout="row" fxLayoutAlign="space-between start">
@@ -51,8 +51,8 @@
                     <span class="deck_info__title--text">Dodate kartice</span>
                 </div>
                 <div class="deck">
-                    <div class="card" *ngFor="let c of this.deck" fxLayout="column" fxLayoutAlign="center center">
-                        <span class="card--text">{{c.TekstFront}}</span>
+                    <div class="card" *ngFor="let c of this.cards" fxLayout="column" fxLayoutAlign="center center">
+                        <span class="card--text">{{c.TextFront}}</span>
                     </div>
                 </div>
             </div>

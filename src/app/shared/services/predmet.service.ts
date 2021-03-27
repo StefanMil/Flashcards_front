@@ -26,4 +26,8 @@ export class PredmetService {
     return this.http.get<any>("http://localhost:5000/skup-kartica/" + id);
   }
 
+  public like(id: number):Observable<any> {
+    return this.http.post<any>("http://localhost:5000/like/" + 1 + "/" + id, null);
+  }
+
 }

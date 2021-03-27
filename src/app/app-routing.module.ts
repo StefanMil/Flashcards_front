@@ -26,7 +26,7 @@ const routes: Routes = [
       { path: 'cetvrta-godina', component: CetvrtaGodinaComponent },
       { path: 'cetvrta-godina', component: CetvrtaGodinaComponent },
       { path: 'predmet/:id/:page', component: PredmetComponent },
-      { path: 'dodaj-skup-kartica', component: DodajSkupKarticaComponent },
+      { path: 'dodaj-skup-kartica/:id', component: DodajSkupKarticaComponent },
       { path: 'skup-kartica/:id', component: PrikazKarticaComponent },
       { path: 'izmeni-profil', component: IzmeniProfilComponent },
       { path: 'pretraga/:id/:page', component: PretragaComponent },
