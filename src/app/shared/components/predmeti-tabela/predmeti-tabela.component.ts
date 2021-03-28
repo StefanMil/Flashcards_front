@@ -38,21 +38,21 @@ export class PredmetiTabelaComponent implements OnInit {
   }
 
   private vratiPredmetePoGodini(godina: number) {
-    if(this.smer='isit') {
+    if(this.smer==='isit') {
       this.predmetService.vratiPredmete(godina)
       .subscribe(subjects => {
-        console.log(subjects);
-        //TODO: izmeni smer
+        subjects = subjects.filter(e => e.department != 1);
         this.dataSource = subjects;
+        console.log(subjects);
       });
     }
-    else if(this.smer='men'){
+    else if(this.smer==='men'){
       this.predmetService.vratiPredmete(godina)
       .subscribe(subjects => {
-        console.log(subjects);
-        //TODO: izmeni smer
+        subjects = subjects.filter(e => e.department != 0);
         this.dataSource = subjects;
-      });
+        console.log(subjects);
+        });
     }
   }
 

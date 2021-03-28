@@ -42,27 +42,19 @@
 }
 
 .table__header__item--predmet {
-  width: 50%;
+  width: 80%;
 }
 
-.table__header__item--katedra {
-  width: 40%;
-}
-
-.table__header__item--espb {
-  width: 10%;
+.table__header__item--semestar {
+  width: 20%;
 }
 
 .table__row__item--predmet {
-  width: 50%;
+  width: 83%;
 }
 
-.table__row__item--katedra {
-  width: 40%;
-}
-
-.table__row__item--espb {
-  width: 10%;
+.table__row__item--semestar {
+  width: 17%;
 }
 
 ::-webkit-scrollbar {
