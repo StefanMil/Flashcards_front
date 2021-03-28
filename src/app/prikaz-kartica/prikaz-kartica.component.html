@@ -1,23 +1,130 @@
 <div class="content" fxLayout="column" fxLayoutAlign="space-evenly center">
-    <div class="wrapper" fxLayout="column" fxLayoutAlign="start center">
-        <div class="deck__info" fxLayout="row" fxLayoutAlign="space-between start">
-            <div class="deck_info__title" fxLayout="column" fxLayoutAlign="space-between start">
-                <span class="deck_info__title--text">Predmet: Baze podataka</span>
-                <span class="deck_info__title--subtitle">SQL komande</span>
+    <div class="wrapper" fxLayout="row" fxLayoutAlign="center center">
+        <div class="first_column" fxLayout="column" fxLayoutAlign="space-evenly center">
+            <div class="deck__info" fxLayout="row" fxLayoutAlign="space-between start">
+                <div class="deck_info__title" fxLayout="column" fxLayoutAlign="space-between start">
+                    <span class="deck_info__title--text">Predmet: Baze podataka</span>
+                    <span class="deck_info__title--subtitle">SQL komande</span>
+                </div>
+                <div class="deck_info__title" fxLayout="column" fxLayoutAlign="space-between start">
+                    <span class="deck_info__title--text">Autor: yoggie</span>
+                </div>
             </div>
-            <div class="deck_info__title" fxLayout="column" fxLayoutAlign="space-between start">
-                <span class="deck_info__title--text">Autor: yoggie</span>
+            <div class="card__list" fxLayout="row" fxLayoutAlign="space-evenly center">
+                <mat-icon class="card__list__arrow">keyboard_arrow_left</mat-icon>
+                <div class="card" fxLayout="column" fxLayoutAlign="center center">
+                    <span class="card--text">Koja komanda sluzi za kreiranje pogleda?</span>
+                </div>
+                <mat-icon class="card__list__arrow">keyboard_arrow_right</mat-icon>
+            </div>
+            <div class="deck__pagination" fxLayout="column" fxLayoutAlign="space-between start">
+                <span class="deck__pagination__text">Kartica 1 od 5</span>
             </div>
         </div>
-        <div class="card__list" fxLayout="row" fxLayoutAlign="space-evenly center">
-            <mat-icon class="card__list__arrow">keyboard_arrow_left</mat-icon>
-            <div class="card" fxLayout="column" fxLayoutAlign="center center">
-                <span class="card--text">Koja komanda sluzi za kreiranje pogleda?</span>
+        <div class="second_column" fxLayout="column" fxLayoutAlign="start center">
+            <div class="comment-section">
+                <span class="comment-section__title">Komentari:</span>
+                <div class="comments">
+                    <div class="comment-and-subcomments">
+                        <div class="comment" fxLayout="column" fxLayoutAlign="space-evenly start">
+                            <span class="comment-user">
+                                Pera
+                            </span>
+                            <span class="comment-text">
+                                Ovo je komentar na skup kartica.
+                            </span>
+                            <span class="comment-reply">
+                                Odgovori
+                            </span>
+                        </div>
+                        <div class="subcomment" fxLayout="column" fxLayoutAlign="space-evenly start">
+                            <span class="comment-user">
+                                Mika
+                            </span>
+                            <span class="subcomment-text">
+                                Ovo je podkomentar na skup kartica.
+                            </span>
+                        </div>
+                        <div class="subcomment" fxLayout="column" fxLayoutAlign="space-evenly start">
+                            <span class="comment-user">
+                                Mika
+                            </span>
+                            <span class="subcomment-text">
+                                Ovo je drugi podkomentar na skup kartica.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="comment-and-subcomments">
+                        <div class="comment" fxLayout="column" fxLayoutAlign="space-evenly start">
+                            <span class="comment-user">
+                                Pera
+                            </span>
+                            <span class="comment-text">
+                                Ovo je komentar na skup kartica.
+                            </span>
+                            <span class="comment-reply">
+                                Odgovori
+                            </span>
+                        </div>
+                        <div class="subcomment" fxLayout="column" fxLayoutAlign="space-evenly start">
+                            <span class="comment-user">
+                                Mika
+                            </span>
+                            <span class="subcomment-text">
+                                Ovo je podkomentar na skup kartica.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="comment-and-subcomments">
+                        <div class="comment" fxLayout="column" fxLayoutAlign="space-evenly start">
+                            <span class="comment-user">
+                                Pera
+                            </span>
+                            <span class="comment-text">
+                                Ovo je komentar na skup kartica.
+                            </span>
+                            <span class="comment-reply">
+                                Odgovori
+                            </span>
+                        </div>
+                        <div class="subcomment" fxLayout="column" fxLayoutAlign="space-evenly start">
+                            <span class="comment-user">
+                                Mika
+                            </span>
+                            <span class="subcomment-text">
+                                Ovo je podkomentar na skup kartica.
+                            </span>
+                        </div>
+                        <div class="subcomment" fxLayout="column" fxLayoutAlign="space-evenly start">
+                            <span class="comment-user">
+                                Mika
+                            </span>
+                            <span class="subcomment-text">
+                                Ovo je podkomentar na skup kartica.
+                            </span>
+                        </div>
+                        <div class="subcomment" fxLayout="column" fxLayoutAlign="space-evenly start">
+                            <span class="comment-user">
+                                Mika
+                            </span>
+                            <span class="subcomment-text">
+                                Ovo je podkomentar na skup kartica.
+                            </span>
+                        </div>
+                        <div class="subcomment" fxLayout="column" fxLayoutAlign="space-evenly start">
+                            <span class="comment-user">
+                                Mika
+                            </span>
+                            <span class="subcomment-text">
+                                Ovo je podkomentar na skup kartica.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="add-comment" fxLayout="row" fxLayoutAlign="end end">
+                    <button mat-flat-button class="add-comment-button" color="primary">Dodaj komentar</button>
+                </div>
             </div>
-            <mat-icon class="card__list__arrow">keyboard_arrow_right</mat-icon>
-        </div>
-        <div class="deck__pagination" fxLayout="column" fxLayoutAlign="space-between start">
-            <span class="deck__pagination__text">Kartica 1 od 5</span>
         </div>
     </div>
 </div>

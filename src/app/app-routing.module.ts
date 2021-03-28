@@ -13,7 +13,6 @@ import { PretragaComponent } from './pretraga/pretraga.component';
 import { PrikazKarticaComponent } from './prikaz-kartica/prikaz-kartica.component';
 import { ProfilComponent } from './profil/profil.component';
 import { RegisterComponent } from './register/register.component';
-import { SkupKarticaStartComponent } from './skup-kartica-start/skup-kartica-start.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -31,7 +30,6 @@ const routes: Routes = [
       { path: 'skup-kartica/:id', component: PrikazKarticaComponent },
       { path: 'izmeni-profil', component: IzmeniProfilComponent },
       { path: 'pretraga/:id/:page', component: PretragaComponent },
-      { path: 'skup-kartica-start/:id', component: SkupKarticaStartComponent },
       { path: '',   redirectTo: 'pocetna', pathMatch: 'full' },
       { path: '**',   redirectTo: 'pocetna', pathMatch: 'full' },
     ]

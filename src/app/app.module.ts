@@ -7,7 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginModule } from './login/login.module';
 import { ProfilModule } from './profil/profil.module';
 import { PrvaGodinaModule } from './godine/prva-godina/prva-godina.module';
-import { PredmetiTabelaComponent } from './shared/components/predmeti-tabela/predmeti-tabela.component';
 import { DrugaGodinaModule } from './godine/druga-godina/druga-godina.module';
 import { TrecaGodinaModule } from './godine/treca-godina/treca-godina.module';
 import { CetvrtaGodinaModule } from './godine/cetvrta-godina/cetvrta-godina.module';
@@ -17,9 +16,7 @@ import { PrikazKarticaModule } from './prikaz-kartica/prikaz-kartica.module';
 import { PretragaModule } from './pretraga/pretraga.module';
 import { IzmeniProfilModule } from './izmeni-profil/izmeni-profil.module';
 import { HttpClientModule } from '@angular/common/http';
-import { RegisterComponent } from './register/register.component';
 import { RegisterModule } from './register/register.module';
-import { SkupKarticaStartModule } from './skup-kartica-start/skup-kartica-start.module';
 
 @NgModule({
   declarations: [
@@ -41,7 +38,6 @@ import { SkupKarticaStartModule } from './skup-kartica-start/skup-kartica-start.
     PretragaModule,
     IzmeniProfilModule,
     RegisterModule,
-    SkupKarticaStartModule,
     HttpClientModule
   ],
   providers: [],

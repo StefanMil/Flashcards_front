@@ -11,6 +11,11 @@
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
+.first_column {
+    width: 60%;
+    height: 100%;
+}
+
 .deck__info {
     padding-top: 2%;
     width: 90%;
@@ -71,4 +76,72 @@
     font-size: 16px;
     font-weight: 200;
     padding-top: 10px;
+}
+
+.second_column {
+    width: 30%;
+    height: 100%;
+}
+
+.comment-section {
+    margin-top: 20px;
+    height: 100%;
+}
+
+.comment-section__title {
+    font-size: 16px;
+    font-weight: 200;
+    padding-left: 25px;
+    border-left: 1px solid #d2d9e0;
+}
+
+.comments {
+    overflow-y: scroll;
+    max-height: 500px;
+    height: 75%;
+    padding-top: 20px;
+    padding-left: 25px;
+    border-left: 1px solid #d2d9e0;
+}
+
+.comment-and-subcomments {
+    width: 95%;
+    border-bottom: 3px solid #546bec;
+    margin-bottom: 20px;
+}
+
+.comment {
+    border-bottom: 1px solid #d2d9e0;
+    padding-left: 10px;
+}
+
+.subcomment {
+    border-bottom: 1px solid #f0f0f0;
+    margin-left: 40px;
+    padding-left: 10px;
+}
+
+.comment-user {
+    font-weight: 500;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.comment-text {
+    padding-bottom: 10px;
+}
+
+.subcomment-text {
+    padding-bottom: 20px;
+}
+
+.comment-reply {
+    padding-bottom: 10px;
+    color: #546bec;
+    cursor: pointer;
+}
+
+.add-comment {
+    width: 100%;
+    margin-top: 30px;
 }
