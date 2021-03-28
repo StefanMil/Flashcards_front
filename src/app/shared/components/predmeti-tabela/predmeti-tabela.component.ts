@@ -43,7 +43,6 @@ export class PredmetiTabelaComponent implements OnInit {
       .subscribe(subjects => {
         subjects = subjects.filter(e => e.department != 1);
         this.dataSource = subjects;
-        console.log(subjects);
       });
     }
     else if(this.smer==='men'){
@@ -51,7 +50,6 @@ export class PredmetiTabelaComponent implements OnInit {
       .subscribe(subjects => {
         subjects = subjects.filter(e => e.department != 0);
         this.dataSource = subjects;
-        console.log(subjects);
         });
     }
   }

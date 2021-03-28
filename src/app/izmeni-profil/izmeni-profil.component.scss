@@ -1,0 +1,71 @@
+.content {
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+}
+
+.wrapper {
+    width: 90%;
+    height: 90%;
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.overview {
+    margin-bottom: 50px;
+}
+
+.overview__title {
+    margin-top: 10px;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.overview__username {
+    font-size: 16px;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+
+.overview__email {
+    font-size: 16px;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+
+.overview__cards {
+    font-size: 16px;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+
+.overview__comments {
+    font-size: 16px;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+
+.overview__likes {
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.profile {
+    width: 35%;
+}
+
+.edit {
+    border-top: 1px solid #d2d9e0;
+    width: 100%;
+}
+
+.edit__title {
+    margin-top: 75px;
+    font-size: 22px;
+}
+
+.edit__input {
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}

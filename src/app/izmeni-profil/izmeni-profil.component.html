@@ -1,1 +1,24 @@
-<p>izmeni-profil works!</p>
+<div class="content" fxLayout="column" fxLayoutAlign="space-evenly center">
+    <div class="wrapper" fxLayout="row" fxLayoutAlign="center center">
+        <div class="profile" fxLayout="column" fxLayoutAlign="start center">
+            <div class="overview" fxLayout="column" fxLayoutAlign="start center">
+                <span class="overview__title">Osnovni podaci</span>
+                <div fxLayout="column" fxLayoutAlign="start start">
+                    <span class="overview__username">Korisnicko ime: {{this.user?.User?.Username}}</span>
+                    <span class="overview__email">Email: {{this.user?.User?.Email}}</span>
+                    <span class="overview__cards">Kreiranih kartica: {{this.user?.Cards_Created}}</span>
+                    <span class="overview__comments">Postavljenih komentara: {{this.user?.Comments_Made}}</span>
+                    <span class="overview__likes">Dobijenih lajkova: {{this.user?.Likes_Got}}</span>
+                </div>
+            </div>
+            <div class="edit" fxLayout="column" fxLayoutAlign="start center">
+                <span class="edit__title">Izmeni korisnicko ime</span>
+                <mat-form-field class="edit__input">
+                    <mat-label>Unesite novo korisnicko ime...</mat-label>
+                    <input matInput [(ngModel)]="this.name">
+                </mat-form-field>
+                <button mat-flat-button class="edit__button" color="primary" (click)="izmeniUsername()">Izmeni</button>
+            </div>
+        </div>
+    </div>
+</div>
