@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DeckOfCards } from '../shared/models/deck-of-cards.model';
+import { LikeObj } from '../shared/models/like.model';
 import { Subject } from '../shared/models/subject.model';
+import { User } from '../shared/models/user.model';
 import { PredmetService } from '../shared/services/predmet.service';
 
 @Component({
@@ -29,8 +31,7 @@ export class PredmetComponent implements OnInit {
           console.log(skupoviKartica);
           this.pages = skupoviKartica.Pages;
           this.decks = skupoviKartica.Decks;
-          this.subjectName = this.decks[0].Subject.Name;
-          this.subject = this.decks[0].Subject;
+          this.subjectName = skupoviKartica.Subject;
         });
   }
 
@@ -55,7 +56,12 @@ export class PredmetComponent implements OnInit {
   }
 
   public like(DeckOfCardsID : number):void{
-    this.predmetService.like(DeckOfCardsID)
+    let like: LikeObj = new LikeObj();
+    like.User = new User();
+    like.User.Username = localStorage.getItem("username");
+    like.DeckOfCards = new DeckOfCards();
+    like.DeckOfCards.DeckOfCardsID = DeckOfCardsID;
+    this.predmetService.like(like)
         .subscribe(result => {
           console.log(result);
         });

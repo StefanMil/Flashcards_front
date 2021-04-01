@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import { LikeObj } from '../models/like.model';
 
 
 @Injectable({
@@ -26,8 +27,12 @@ export class PredmetService {
     return this.http.get<any>("http://localhost:5000/skup-kartica/" + id);
   }
 
-  public like(id: number):Observable<any> {
-    return this.http.post<any>("http://localhost:5000/like/" + 1 + "/" + id, null);
+  public like(like: LikeObj):Observable<any> {
+    return this.http.post<any>("http://localhost:5000/like/", like);
+  }
+
+  public dislike(like: LikeObj):Observable<any> {
+    return this.http.delete<any>("http://localhost:5000/like/" + like.DeckOfCards.DeckOfCardsID + "/" + like.User.Username);
   }
 
 }

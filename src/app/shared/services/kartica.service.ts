@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Card } from '../models/card.model';
 import { DeckOfCards } from '../models/deck-of-cards.model';
 
 @Injectable({
