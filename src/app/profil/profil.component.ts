@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from '../shared/services/login.service';
+import { ProfilService } from '../shared/services/profil.service';
 
 @Component({
   selector: 'app-profil',
@@ -13,7 +14,8 @@ export class ProfilComponent implements OnInit {
   public currentUser: any;
   public username: string;
 
-  constructor(private router:Router, private loginService:LoginService) { }
+  constructor(private router:Router, 
+    private loginService:LoginService) { }
 
   ngOnInit(): void {
     if (!(localStorage.getItem('currentUser')=='true')) {
@@ -21,7 +23,6 @@ export class ProfilComponent implements OnInit {
     }
     this.currentUser = this.loginService.currentUser;
     this.username = localStorage.getItem('username');
-    
   }
 
   public search(): void {

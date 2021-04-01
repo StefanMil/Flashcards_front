@@ -14,7 +14,7 @@
                 <span class="content__first-row__card__title">Kreirano flash kartica:</span>
             </div>
             <div class="content__first-row__card--wrapper-value" fxLayout="row" fxLayoutAlign="space-between center">
-                <span class="content__first-row__card__value">17</span>
+                <span class="content__first-row__card__value">{{this.user?.Cards_Created}}</span>
                 <mat-icon class="content__first-row__card__icon">create</mat-icon>
             </div>
         </div>
@@ -23,7 +23,7 @@
                 <span class="content__first-row__card__title">Ukupno lajkova:</span>
             </div>
             <div class="content__first-row__card--wrapper-value" fxLayout="row" fxLayoutAlign="space-between center">
-                <span class="content__first-row__card__value">451</span>
+                <span class="content__first-row__card__value">{{this.user?.Likes_Got}}</span>
                 <mat-icon class="content__first-row__card__icon">favorite</mat-icon>
             </div>
         </div>
@@ -32,14 +32,43 @@
                 <span class="content__first-row__card__title">Ukupno postavljenih komentara:</span>
             </div>
             <div class="content__first-row__card--wrapper-value" fxLayout="row" fxLayoutAlign="space-between center">
-                <span class="content__first-row__card__value">5</span>
+                <span class="content__first-row__card__value">{{this.user?.Comments_Made}}</span>
                 <mat-icon class="content__first-row__card__icon">add_comment</mat-icon>
             </div>
         </div>
     </div>
     <div class="content__second-row" fxLayout="row" fxLayoutAlign="space-between center">
-        <div class="content__second-row__card__one">
-            
+        <div class="content__second-row__card__one" fxLayout="row" fxLayoutAlign="center center">
+            <div class="deck__wrapper" fxLayout="column" FxLayoutAlign="space-between center">
+                <div class="deck__above__wrapper" fxLayout="row" fxLayoutAlign="space-between center">
+                    <span class="deck__above">Najviše lajkova</span>
+                    <span class="deck__above--text">245</span>
+                </div>
+                <div class="deck" fxLayout="column" FxLayoutAlign="space-around center">
+                    <div class="deck__title" fxLayout="column" fxLayoutAlign="center center">
+                        <span class="deck__title__text">SQL komande</span>
+                        <span class="deck__title__author">Autor: Pera</span>
+                    </div>
+                    <div class="deck__date" fxLayout="column" fxLayoutAlign="center center">
+                        <span class="deck__date__text">12.05.2017.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="deck__wrapper" fxLayout="column" FxLayoutAlign="space-between center">
+                <div class="deck__above__wrapper" fxLayout="row" fxLayoutAlign="space-between center">
+                    <span class="deck__above">Poslednji kreiran</span>
+                    <span class="deck__above--text">12.04.2021.</span>
+                </div>
+                <div class="deck" fxLayout="column" FxLayoutAlign="space-around center">
+                    <div class="deck__title" fxLayout="column" fxLayoutAlign="center center">
+                        <span class="deck__title__text">Medjunarodno tržište</span>
+                        <span class="deck__title__author">Autor: Pera</span>
+                    </div>
+                    <div class="deck__date" fxLayout="column" fxLayoutAlign="center center">
+                        <span class="deck__date__text">12.05.2017.</span>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="content__second-row__card__two">
             
