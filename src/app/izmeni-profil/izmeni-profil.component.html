@@ -12,12 +12,16 @@
                 </div>
             </div>
             <div class="edit" fxLayout="column" fxLayoutAlign="start center">
-                <span class="edit__title">Izmeni korisnicko ime</span>
+                <span class="edit__title">Izmeni lozinku</span>
                 <mat-form-field class="edit__input">
-                    <mat-label>Unesite novo korisnicko ime...</mat-label>
-                    <input matInput [(ngModel)]="this.name">
+                    <mat-label>Unesite staru lozinku...</mat-label>
+                    <input matInput [(ngModel)]="this.oldPassword">
                 </mat-form-field>
-                <button mat-flat-button class="edit__button" color="primary" (click)="izmeniUsername()">Izmeni</button>
+                <mat-form-field class="edit__input--second">
+                    <mat-label>Unesite novu lozinku...</mat-label>
+                    <input matInput [(ngModel)]="this.password">
+                </mat-form-field>
+                <button mat-flat-button class="edit__button" color="primary" (click)="izmeniLozinku()">Izmeni</button>
             </div>
         </div>
     </div>

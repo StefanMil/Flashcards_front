@@ -60,12 +60,17 @@
 }
 
 .edit__title {
-    margin-top: 75px;
+    margin-top: 50px;
     font-size: 22px;
 }
 
 .edit__input {
     width: 200px;
     margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
+}
+
+.edit__input--second {
+    width: 200px;
+    margin-bottom: 20px;
 }

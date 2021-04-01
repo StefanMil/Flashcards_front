@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../shared/models/user.model';
 import { ProfilService } from '../shared/services/profil.service';
 
 export interface Profile{
@@ -19,7 +20,8 @@ export interface Profile{
 
 export class IzmeniProfilComponent implements OnInit {
 
-  public name: string;
+  public password: string;
+  public oldPassword: string;
   public user: Profile;
 
   constructor(private profilService: ProfilService) { }
@@ -31,8 +33,14 @@ export class IzmeniProfilComponent implements OnInit {
       });
   }
 
-  public izmeniUsername(): void {
-    this.profilService.izmeniUsername(localStorage.getItem("username"), this.name);
+  public izmeniLozinku(): void {
+    let user: User = new User();
+    user.Username = localStorage.getItem("username");
+    user.Password = this.oldPassword;
+    user.Email = this.password;
+    console.log(user);
+    
+    this.profilService.izmeniLozinku(user);
   }
 
 }

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { User } from '../models/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,15 @@ export class ProfilService {
     return this.http.get<any>("http://localhost:5000/profil/" + username);
   }
 
-  public izmeniUsername(oldUsername: string, oldEmail: string) {
-
+  public izmeniLozinku(user: User) {
+    this.http.post<any>("http://localhost:5000/korisnik", user)
+    .subscribe(
+      (response) => {
+        console.log(response);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 }
