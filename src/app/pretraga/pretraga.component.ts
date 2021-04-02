@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DeckOfCards } from '../shared/models/deck-of-cards.model';
+import { LikeObj } from '../shared/models/like.model';
+import { User } from '../shared/models/user.model';
 import { PredmetService } from '../shared/services/predmet.service';
 
 @Component({
@@ -14,6 +16,7 @@ export class PretragaComponent implements OnInit {
   public searchBy: string = "";
   public page: number;
   public decks: DeckOfCards[];
+  public pages: number;
 
   constructor(private route: ActivatedRoute, 
     private predmetService: PredmetService) {
@@ -32,7 +35,8 @@ export class PretragaComponent implements OnInit {
     this.predmetService.vratiSkupoveKarticaPretraga(searchBy, page)
     .subscribe(decks => {
       console.log(decks);
-      this.decks = decks;
+        this.pages = decks.Pages;
+        this.decks = decks.Decks;
     });
   }
 
@@ -46,6 +50,32 @@ export class PretragaComponent implements OnInit {
     if(this.page<200){
       this.pretraga(this.searchBy, ++this.page);
     }
+  }
+
+  public like(DeckOfCardsID : number):void{
+    let like: LikeObj = new LikeObj();
+    like.User = new User();
+    like.User.Username = localStorage.getItem("username");
+    like.DeckOfCards = new DeckOfCards();
+    like.DeckOfCards.DeckOfCardsID = DeckOfCardsID;
+    this.predmetService.like(like)
+        .subscribe(result => {
+          console.log(result);
+        });
+    location.reload();
+  }
+
+  public dislike(DeckOfCardsID : number):void{
+    let like: LikeObj = new LikeObj();
+    like.User = new User();
+    like.User.Username = localStorage.getItem("username");
+    like.DeckOfCards = new DeckOfCards();
+    like.DeckOfCards.DeckOfCardsID = DeckOfCardsID;
+    this.predmetService.dislike(like)
+        .subscribe(result => {
+          console.log(result);
+        });
+    location.reload();
   }
 
 }
