@@ -5,6 +5,7 @@ import { ProfilService } from '../shared/services/profil.service';
 export interface Profile{
   Cards_Created: number;
   Comments_Made: number;
+  Latest_decks_of_cards: any;
   Likes_Got: number;
   User: {
     Username: string;

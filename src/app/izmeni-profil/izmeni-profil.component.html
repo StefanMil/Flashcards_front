@@ -15,11 +15,11 @@
                 <span class="edit__title">Izmeni lozinku</span>
                 <mat-form-field class="edit__input">
                     <mat-label>Unesite staru lozinku...</mat-label>
-                    <input matInput [(ngModel)]="this.oldPassword">
+                    <input matInput [(ngModel)]="this.oldPassword" type="password">
                 </mat-form-field>
                 <mat-form-field class="edit__input--second">
                     <mat-label>Unesite novu lozinku...</mat-label>
-                    <input matInput [(ngModel)]="this.password">
+                    <input matInput [(ngModel)]="this.password" type="password">
                 </mat-form-field>
                 <button mat-flat-button class="edit__button" color="primary" (click)="izmeniLozinku()">Izmeni</button>
             </div>

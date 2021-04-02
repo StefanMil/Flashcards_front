@@ -57,15 +57,15 @@
             <div class="deck__wrapper" fxLayout="column" FxLayoutAlign="space-between center">
                 <div class="deck__above__wrapper" fxLayout="row" fxLayoutAlign="space-between center">
                     <span class="deck__above">Poslednji kreiran</span>
-                    <span class="deck__above--text">12.04.2021.</span>
+                    <span class="deck__above--text">{{this.user?.Latest_decks_of_cards?.Date | date: 'dd/MM/yyyy'}}</span>
                 </div>
                 <div class="deck" fxLayout="column" FxLayoutAlign="space-around center">
                     <div class="deck__title" fxLayout="column" fxLayoutAlign="center center">
-                        <span class="deck__title__text">Medjunarodno tržište</span>
-                        <span class="deck__title__author">Autor: Pera</span>
+                        <span class="deck__title__text">{{this.user?.Latest_decks_of_cards?.Name}}</span>
+                        <span class="deck__title__author">Autor: {{this.user?.Latest_decks_of_cards?.User?.Username}}</span>
                     </div>
                     <div class="deck__date" fxLayout="column" fxLayoutAlign="center center">
-                        <span class="deck__date__text">12.05.2017.</span>
+                        <span class="deck__date__text">{{this.user?.Latest_decks_of_cards?.Date | date: 'dd/MM/yyyy'}}</span>
                     </div>
                 </div>
             </div>

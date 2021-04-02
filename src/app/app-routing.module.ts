@@ -34,7 +34,7 @@ const routes: Routes = [
       { path: '**',   redirectTo: 'pocetna', pathMatch: 'full' },
     ]
   },
-  { path: '',   redirectTo: 'app', pathMatch: 'full' },
+  { path: '',   redirectTo: 'login', pathMatch: 'full' },
   { path: '**',   redirectTo: 'app', pathMatch: 'full' },
 ];
 
