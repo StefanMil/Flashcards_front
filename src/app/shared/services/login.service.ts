@@ -26,6 +26,7 @@ export class LoginService {
           this.router.navigateByUrl('app/pocetna');
           this.currentUser = response;
           localStorage.setItem('username', this.currentUser.User.Username);
+          localStorage.setItem('id', this.currentUser.UserID);
         },
         (error) => {
           if(error.error.text==='Ne postoji taj username u bazi'){

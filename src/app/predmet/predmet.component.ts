@@ -25,7 +25,6 @@ export class PredmetComponent implements OnInit {
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
     this.page =  this.route.snapshot.params['page'];
-    //TODO: Call service
     this.predmetService.vratiSkupoveKartica(this.id, this.page)
         .subscribe(skupoviKartica => {
           console.log(skupoviKartica);
@@ -65,9 +64,19 @@ export class PredmetComponent implements OnInit {
         .subscribe(result => {
           console.log(result);
         });
+    location.reload();
   }
 
   public dislike(DeckOfCardsID : number):void{
-    
+    let like: LikeObj = new LikeObj();
+    like.User = new User();
+    like.User.Username = localStorage.getItem("username");
+    like.DeckOfCards = new DeckOfCards();
+    like.DeckOfCards.DeckOfCardsID = DeckOfCardsID;
+    this.predmetService.dislike(like)
+        .subscribe(result => {
+          console.log(result);
+        });
+    location.reload();
   }
 }

@@ -65,11 +65,19 @@
     transition: 0.2s;
 }
 
+.card--text--position{
+    color: #7c7c7c;
+    font-weight: 100;
+}
+
 .card--text {
     max-width: 350px;
     text-align: center;
     line-height: 25px;
     font-size: 20px;
+    height: 90%;
+    vertical-align: middle;
+    padding-bottom: 5%;
 }
 
 .deck__pagination__text {
@@ -86,6 +94,7 @@
 .comment-section {
     margin-top: 20px;
     height: 100%;
+    width: 100%;
 }
 
 .comment-section__title {
@@ -99,6 +108,7 @@
     overflow-y: scroll;
     max-height: 500px;
     height: 75%;
+    width: 100%;
     padding-top: 20px;
     padding-left: 25px;
     border-left: 1px solid #d2d9e0;

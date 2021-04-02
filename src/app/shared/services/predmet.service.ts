@@ -16,6 +16,7 @@ export class PredmetService {
   }
 
   public vratiSkupoveKartica(id: number, page:number):Observable<any> {
+    let Name: string = localStorage.getItem("username");
     return this.http.get<any>("http://localhost:5000/predmeti/" + id + "/" + page);
   }
 
@@ -32,7 +33,7 @@ export class PredmetService {
   }
 
   public dislike(like: LikeObj):Observable<any> {
-    return this.http.delete<any>("http://localhost:5000/like/" + like.DeckOfCards.DeckOfCardsID + "/" + like.User.Username);
+    return this.http.delete<any>("http://localhost:5000/like/" + like.DeckOfCards.DeckOfCardsID + "/" + localStorage.getItem("id"));
   }
 
 }

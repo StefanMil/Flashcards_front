@@ -3,126 +3,53 @@
         <div class="first_column" fxLayout="column" fxLayoutAlign="space-evenly center">
             <div class="deck__info" fxLayout="row" fxLayoutAlign="space-between start">
                 <div class="deck_info__title" fxLayout="column" fxLayoutAlign="space-between start">
-                    <span class="deck_info__title--text">Predmet: Baze podataka</span>
-                    <span class="deck_info__title--subtitle">SQL komande</span>
+                    <span class="deck_info__title--text">Predmet: {{this.deckOfCards?.subject?.name}}</span>
+                    <span class="deck_info__title--subtitle">{{this.deckOfCards?.name}}</span>
                 </div>
                 <div class="deck_info__title" fxLayout="column" fxLayoutAlign="space-between start">
-                    <span class="deck_info__title--text">Autor: yoggie</span>
+                    <span class="deck_info__title--text">Autor: {{this.deckOfCards?.user?.username}}</span>
                 </div>
             </div>
             <div class="card__list" fxLayout="row" fxLayoutAlign="space-evenly center">
-                <mat-icon class="card__list__arrow">keyboard_arrow_left</mat-icon>
-                <div class="card" fxLayout="column" fxLayoutAlign="center center">
-                    <span class="card--text">Koja komanda sluzi za kreiranje pogleda?</span>
+                <mat-icon class="card__list__arrow" (click)="moveLeft()">keyboard_arrow_left</mat-icon>
+                <div class="card" fxLayout="column" fxLayoutAlign="center center" (click)="flip()">
+                    <span class="card--text--position">{{!this.flipped ? "Front" : "Back"}}</span>
+                    <span class="card--text"fxLayout="column" fxLayoutAlign="center center">{{!this.flipped ? this.currentCard?.textFront : this.currentCard?.textBack}}</span>
                 </div>
-                <mat-icon class="card__list__arrow">keyboard_arrow_right</mat-icon>
+                <mat-icon class="card__list__arrow" (click)="moveRight()">keyboard_arrow_right</mat-icon>
             </div>
             <div class="deck__pagination" fxLayout="column" fxLayoutAlign="space-between start">
-                <span class="deck__pagination__text">Kartica 1 od 5</span>
+                <span class="deck__pagination__text">Kartica {{this.currentCardId+1}} od {{this.deckLength}}</span>
             </div>
         </div>
         <div class="second_column" fxLayout="column" fxLayoutAlign="start center">
             <div class="comment-section">
                 <span class="comment-section__title">Komentari:</span>
                 <div class="comments">
-                    <div class="comment-and-subcomments">
+                    <div class="comment-and-subcomments" *ngFor="let c of this.deckOfCards?.comments">
                         <div class="comment" fxLayout="column" fxLayoutAlign="space-evenly start">
                             <span class="comment-user">
-                                Pera
+                                {{c?.user?.username}}
                             </span>
                             <span class="comment-text">
-                                Ovo je komentar na skup kartica.
+                                {{c?.text}}
                             </span>
-                            <span class="comment-reply">
+                            <span class="comment-reply" (click)="openDialog(true, c?.commentID)">
                                 Odgovori
                             </span>
                         </div>
-                        <div class="subcomment" fxLayout="column" fxLayoutAlign="space-evenly start">
+                        <div class="subcomment" *ngFor="let s of this.c?.subComments" fxLayout="column" fxLayoutAlign="space-evenly start">
                             <span class="comment-user">
-                                Mika
+                                {{s?.subCommentedBy?.username}}
                             </span>
                             <span class="subcomment-text">
-                                Ovo je podkomentar na skup kartica.
-                            </span>
-                        </div>
-                        <div class="subcomment" fxLayout="column" fxLayoutAlign="space-evenly start">
-                            <span class="comment-user">
-                                Mika
-                            </span>
-                            <span class="subcomment-text">
-                                Ovo je drugi podkomentar na skup kartica.
-                            </span>
-                        </div>
-                    </div>
-                    <div class="comment-and-subcomments">
-                        <div class="comment" fxLayout="column" fxLayoutAlign="space-evenly start">
-                            <span class="comment-user">
-                                Pera
-                            </span>
-                            <span class="comment-text">
-                                Ovo je komentar na skup kartica.
-                            </span>
-                            <span class="comment-reply">
-                                Odgovori
-                            </span>
-                        </div>
-                        <div class="subcomment" fxLayout="column" fxLayoutAlign="space-evenly start">
-                            <span class="comment-user">
-                                Mika
-                            </span>
-                            <span class="subcomment-text">
-                                Ovo je podkomentar na skup kartica.
-                            </span>
-                        </div>
-                    </div>
-                    <div class="comment-and-subcomments">
-                        <div class="comment" fxLayout="column" fxLayoutAlign="space-evenly start">
-                            <span class="comment-user">
-                                Pera
-                            </span>
-                            <span class="comment-text">
-                                Ovo je komentar na skup kartica.
-                            </span>
-                            <span class="comment-reply">
-                                Odgovori
-                            </span>
-                        </div>
-                        <div class="subcomment" fxLayout="column" fxLayoutAlign="space-evenly start">
-                            <span class="comment-user">
-                                Mika
-                            </span>
-                            <span class="subcomment-text">
-                                Ovo je podkomentar na skup kartica.
-                            </span>
-                        </div>
-                        <div class="subcomment" fxLayout="column" fxLayoutAlign="space-evenly start">
-                            <span class="comment-user">
-                                Mika
-                            </span>
-                            <span class="subcomment-text">
-                                Ovo je podkomentar na skup kartica.
-                            </span>
-                        </div>
-                        <div class="subcomment" fxLayout="column" fxLayoutAlign="space-evenly start">
-                            <span class="comment-user">
-                                Mika
-                            </span>
-                            <span class="subcomment-text">
-                                Ovo je podkomentar na skup kartica.
-                            </span>
-                        </div>
-                        <div class="subcomment" fxLayout="column" fxLayoutAlign="space-evenly start">
-                            <span class="comment-user">
-                                Mika
-                            </span>
-                            <span class="subcomment-text">
-                                Ovo je podkomentar na skup kartica.
+                                {{s?.text}}
                             </span>
                         </div>
                     </div>
                 </div>
                 <div class="add-comment" fxLayout="row" fxLayoutAlign="end end">
-                    <button mat-flat-button class="add-comment-button" color="primary">Dodaj komentar</button>
+                    <button mat-flat-button class="add-comment-button" color="primary" (click)="openDialog(false, 1)">Dodaj komentar</button>
                 </div>
             </div>
         </div>
