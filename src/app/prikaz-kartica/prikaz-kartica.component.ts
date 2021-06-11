@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Card } from '../shared/models/card.model';
 import { KarticaService } from '../shared/services/kartica.service';
 import { PredmetService } from '../shared/services/predmet.service';
@@ -23,10 +23,12 @@ export class PrikazKarticaComponent implements OnInit {
   public currentCard: any;
   public deckLength: number;
   public flipped: boolean;
+  public role: string;
 
   constructor(private route: ActivatedRoute,
     private predmetService: PredmetService,
-    public dialog: MatDialog) {
+    public dialog: MatDialog,
+    private router: Router) {
       this.predmetService.vratiSkupKartica(this.route.snapshot.params['id'])
     .subscribe(skupKartica => {
       console.log(skupKartica);
@@ -35,6 +37,7 @@ export class PrikazKarticaComponent implements OnInit {
       this.currentCardId = 0;
       console.log(this.deckOfCards?.cards[0]);
       this.currentCard = this.deckOfCards?.cards[this.currentCardId];
+      this.role = localStorage.getItem("role");
     });
   }
 
@@ -50,6 +53,18 @@ export class PrikazKarticaComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
     });
+  }
+
+  deleteDeck(): void{
+    this.predmetService.deleteDeck(this.deckOfCards.deckOfCardsID).subscribe(
+      (response) => {
+        console.log(response);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+    this.router.navigateByUrl("http://localhost:4200/");
   }
 
   public moveRight() {

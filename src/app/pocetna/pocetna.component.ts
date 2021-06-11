@@ -11,6 +11,7 @@ export interface Profile{
     Username: string;
     Email: string;
   }
+  quiz: any;
 }
 
 @Component({
@@ -23,6 +24,10 @@ export class PocetnaComponent implements OnInit {
   public currentUser: any;
   public username: string;
   public user: Profile;
+  public showing: string;
+  public question: string;
+  public answer: string;
+  public showingType: string;
 
   constructor(private loginService: LoginService,
     private profilService:ProfilService) { 
@@ -33,8 +38,23 @@ export class PocetnaComponent implements OnInit {
     this.username = localStorage.getItem('username');
     this.profilService.vratiProfil(this.username).subscribe(profil => {
       this.user = profil;
+      this.question = this.user?.quiz?.results[0]?.question;
+      this.answer = this.user?.quiz?.results[0]?.correct_answer;
+      this.showing = this.question;
+      this.showingType = "Pitanje";
       console.log(profil);
     });
+  }
+  
+  public showAnswer(): void {
+    if(this.showingType=="Pitanje"){
+      this.showingType = "Odgovor";
+      this.showing = this.answer;
+    }
+    else {
+      this.showingType = "Pitanje";
+      this.showing = this.question;
+    }
   }
 
 }

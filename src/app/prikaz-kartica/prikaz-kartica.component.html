@@ -49,6 +49,7 @@
                     </div>
                 </div>
                 <div class="add-comment" fxLayout="row" fxLayoutAlign="end end">
+                    <button mat-flat-button class="delete-deck-button" *ngIf = "this.role == '0'" color="primary" (click)="deleteDeck()">Obrisi skup kartica</button>
                     <button mat-flat-button class="add-comment-button" color="primary" (click)="openDialog(false, 1)">Dodaj komentar</button>
                 </div>
             </div>

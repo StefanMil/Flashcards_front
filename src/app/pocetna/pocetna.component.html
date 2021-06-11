@@ -71,7 +71,20 @@
             </div>
         </div>
         <div class="content__second-row__card__two">
-            
+            <div class="deck__wrapper deck__wrapper-api" fxLayout="column" FxLayoutAlign="space-between center">
+                <div class="deck__above__wrapper" fxLayout="row" fxLayoutAlign="space-between center">
+                    <span class="deck__above">Random pitanje</span>
+                </div>
+                <div class="deck" fxLayout="column" FxLayoutAlign="space-around center">
+                    <div class="deck__title" fxLayout="column" fxLayoutAlign="center center">
+                        <span class="deck__title__text" (click)="showAnswer()">{{this.showing}}</span>
+                        <span class="deck__title__author">{{this.user?.quiz?.results[0]?.category}}</span>
+                    </div>
+                    <div class="deck__date" fxLayout="column" fxLayoutAlign="center center">
+                        <span class="deck__date__text">{{this.showingType}}</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

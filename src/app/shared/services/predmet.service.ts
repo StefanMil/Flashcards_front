@@ -36,4 +36,8 @@ export class PredmetService {
     return this.http.delete<any>("http://localhost:5000/like/" + like.DeckOfCards.DeckOfCardsID + "/" + localStorage.getItem("id"));
   }
 
+  public deleteDeck(id:number):Observable<any> {
+    return this.http.delete<any>("http://localhost:5000/kartice/" + id);
+  }
+
 }
