@@ -16,8 +16,7 @@ export class PredmetService {
   }
 
   public vratiSkupoveKartica(id: number, page:number):Observable<any> {
-    let Name: string = localStorage.getItem("username");
-    return this.http.get<any>("http://localhost:5000/predmeti/" + id + "/" + page);
+    return this.http.get<any>("http://localhost:5000/predmeti/" + id +  "/" + page);
   }
 
   public vratiSkupoveKarticaPretraga(searchBy: string, page:number):Observable<any> {

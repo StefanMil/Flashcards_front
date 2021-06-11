@@ -34,8 +34,6 @@ export class KarticaService {
   }
 
   public sacuvajPodKomentar(commentId: number, Text: string) {
-    console.log(commentId + " " + Text);
-    
     this.http.post<any>("http://localhost:5000/podkomentar", {Comment: {CommentId: commentId}, Text: Text, SubCommentedBy: {Username: localStorage.getItem("username")}})
       .subscribe(
         (response) => {
